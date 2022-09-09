@@ -1,0 +1,3139 @@
+  $breakpoints: (
+	'xs-phone': 580px,
+	'phone': 640px,
+	'tablet': 768px,
+	'tablet-x': 992px,
+	'desktop': 1024px,
+	'widescreen': 1200px,
+	'widescreen-large': 1400px,
+);
+
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/reset';
+@import 'vendors/fonts';
+@import 'vendors/bootstrap';
+@import 'vendors/fontawesomefive';
+@import 'vendors/fontawesome';
+@import 'vendors/slick';
+
+
+
+
+@import 'base/typography';
+@import 'base/helpers';
+@import 'base/forms';
+@import 'vendors/sociallinks';
+
+
+body{
+	font-size: 14px;
+	line-height: 22px;
+	font-family: $poppins;
+	background: $color1;
+	color: #fff;
+}
+
+button,
+a{
+	color: #BDBDBD;
+	@include ease;
+	text-decoration: none;
+
+	&:focus{
+		outline: none;
+		box-shadow: none;
+	}
+
+	&:hover{
+		color: #fff;
+	}
+}
+
+
+button,
+input[type="submit"],
+.btn{
+	position: relative;
+	height: 40px;
+	line-height: 38px;
+	font-size: 14px;
+	border: 1px solid transparent;
+	padding: 0 25px;
+	text-align: center;
+	border-radius: 20px;
+	color:#fff;
+	background: $color3;
+	@include ease;
+
+	&:hover{
+		color: #fff;
+	}
+
+	&:focus{
+		box-shadow: none;
+		outline: none;
+	}
+
+	i{
+		margin: 0 5px 0 0;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+
+	}
+
+	&.btn-yellow-dark{
+		background: $color10;
+		border-color: $color10;
+	}
+
+	&.btn-yellow{
+		background: $color4;
+		border-color: $color4;
+	}
+
+	&.btn-red{
+		background: $color12;
+		border-color: $color12;
+	}
+
+	&.btn-light{
+		background: $color16;
+		border-color: transparent;
+	}
+
+	&.btn-green{
+		background: $color11;
+		border-color: $color11;
+	}
+
+	&.btn-blue{
+		background: $color1;
+	}
+
+	&.bg-light-blue{
+		background: $color8;
+	}
+
+	&.btn-facebook{
+		background: #5077C8;
+		border: 1px solid #5077C8;
+	}
+
+	&.btn-white{
+		background: #fff;
+		border: 1px solid #fff;
+		color: #2C2C2E;
+	}
+
+	&.btn-dark{
+		background: #2C2C2E;
+		border: 1px solid #2C2C2E;
+	}
+
+	&.btn-google{
+		background: #DB4437;
+		border: 1px solid #DB4437;
+	}
+
+
+	&.small{
+		height: 26px;
+		line-height: 24px;
+		padding: 0 15px;
+	}
+
+	&.medium{
+		height: 34px;
+		line-height: 32px;
+		padding: 0 20px;
+	}
+
+	&.circle{
+		border-radius: 50%;
+		padding: 0 8px;
+
+		i{
+			margin: 0;
+		}
+	}
+
+	&.view{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: $color16;
+		color: #fff;
+		padding: 0;
+		line-height: 38px;
+		font-size: 13px;
+
+		 i{
+			 margin: 0;
+			 font-size: 14px;
+		 }
+	}
+
+	&.btn-popup{
+		@include flex-align-center;
+		padding: 0;
+		border-radius: 50%;
+
+
+		i{
+			margin: 0;
+			top: 0;
+		}
+	}
+}
+
+.btn-list{
+	@extend %listreset;
+	position: relative;
+	overflow: hidden;
+
+	@include flex-align-center;
+
+	li{
+		padding: 2px 4px;
+	}
+
+	&.footer{
+		display: flex;
+		border-top: 1px solid $color16;
+		margin: 0 -15px -15px;
+
+		li{
+			flex: 1 0 auto;
+			border-left: 1px solid $color16;
+
+			&:first-child{
+				border: none;
+			}
+		}
+
+		a{
+			display: block;
+			text-align: center;
+			padding: 10px 15px;
+
+
+		}
+	}
+}
+
+
+.container-fluid{
+	padding: 0 50px;
+
+	@include media ("<widescreen"){
+		padding: 0 15px;
+	}
+}
+
+
+
+.img-box{
+	overflow: hidden;
+	position: relative;
+
+	img{
+		@include img-reset;
+
+		&.ful-width{
+			width: 100%;
+		}
+	}
+}
+
+img{
+	&.ful-width{
+		width: 100%;
+	}
+}
+
+#wrapper{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	@include ease;
+
+	&.nav-active{
+		#sidebar{
+			left: 0;
+		}
+	}
+
+	&.messagesidebar-active{
+		.messagesidebar{
+			left: 0;
+		}
+	}
+}
+
+.fullwidth-page{
+	#footer{
+		margin: 0;
+	}
+}
+
+#header{
+	@include flex-align;
+	justify-content: space-between;
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: $color2;
+	z-index: 99;
+
+	@include media ("<tablet-x"){
+		padding: 15px 0 5px;
+
+		.vip{
+			float: right;
+		}
+
+		.container-fluid{
+			padding: 0 5px;
+		}
+	}
+
+
+	.logo{
+		float: left;
+		width: 270px;
+		margin: 0 15px 0 -50px;
+		@include flex-align-center;
+
+		@include media ("<widescreen"){
+			width: 305px;
+		}
+
+		@include media ("<tablet-x"){
+			width: 120px;
+			margin: 0 0 10px;
+		}
+
+
+		img{
+			height: 38px;
+		}
+
+	}
+
+	.btn-list{
+		float: right;
+		margin: 0;
+
+		@include media ("<tablet-x"){
+			float: none;
+			flex-wrap: wrap;
+			margin: 10px 0 0;
+			width: 100%;
+			padding: 5px 0 0;
+			border-top: 1px solid $color16;
+		}
+
+		li{
+			@include media ("<tablet-x"){
+				-ms-flex-preferred-size: 0;
+				flex-basis: 0;
+				-ms-flex-positive: 1;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+		}
+
+		.nav-open{
+			display: none;
+
+			@include media ("<tablet-x"){
+				display: block;
+			}
+		}
+
+		.btn-text{
+			@include media ("<tablet-x"){
+				display: none;
+			}
+		}
+
+		a{
+			&.btn{
+				@include media ("<tablet-x"){
+					width: 100%;
+					border-radius: 2px;
+					height: 40px;
+					padding: 0;
+					line-height: 40px;
+					text-align: center;
+
+					i{
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+#main{
+	position: relative;
+
+}
+
+.login{
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	.container{
+		min-height: calc(100vh - 54px);
+		padding: 50px 15px;
+		@include flex-align-center;
+	}
+
+	.content-box{
+		max-width: 380px;
+		margin: 0 auto;
+		padding: 50px 30px;
+
+		@include media ("<xs-phone"){
+			padding: 50px 15px;
+
+			br{
+				display: none;
+			}
+		}
+
+
+
+		&.w-100{
+			max-width: 100%;
+		}
+	}
+
+	.logo{
+		margin: 0 auto 15px;
+	}
+}
+
+.content-box{
+	background: $color2;
+	border-radius: 10px;
+	position: relative;
+}
+
+.logo{
+	display: block;
+	width: 150px;
+
+	a{
+		display: block;
+	}
+
+	img{
+		@include img-reset;
+	}
+}
+
+
+.copy-right{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include media ("<phone"){
+		flex-direction: column;
+	}
+}
+
+#footer{
+	position: relative;
+	background: $color2;
+	padding: 15px 0;
+	@include flex-align;
+	justify-content: space-between;
+	color: $color15;
+	font-size: 12px;
+	margin: 0 0 0 270px;
+
+	@include media ("<tablet-x"){
+		margin: 0;
+		display: block;
+	}
+
+	.col{
+		float: left;
+		@include flex-align;
+
+		@include media ("<tablet-x"){
+			float: none;
+			text-align: center;
+			flex-direction: column-reverse;
+			padding: 0 0 10px;
+		}
+	}
+
+	.language-dropwdown{
+		float: right;
+
+		@include media ("<tablet-x"){
+			float: none;
+			margin: 0 auto;
+			width: 100px;
+		}
+	}
+
+	.dropdown{
+		font-size: 12px;
+
+		button{
+			font-size: 12px;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	.dropdown-menu{
+		top: auto !important;
+		bottom: 100% !important;
+		left: auto !important;
+		right: 0 !important;
+	}
+}
+
+.quick-links{
+	@extend %listreset;
+	position: relative;
+	color: $color15;
+	@include flex-align;
+	padding: 0 0 0 15px;
+
+	@include media ("<tablet-x"){
+		padding: 0;
+		justify-content: center;
+	}
+
+	@include media ("<phone"){
+		flex-wrap: wrap;
+	}
+
+	li{
+		padding: 0 15px;
+		position: relative;
+
+		@include media ("<tablet-x"){
+			padding: 5px 15px;
+		}
+
+		@include media ("<phone"){
+			flex: 0 0 50%;
+		}
+
+		&:first-child{
+			@include media ("<tablet-x"){
+
+
+				&:before{
+					display: none;
+				}
+			}
+		}
+
+		&:before{
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 10px;
+			background: $color15;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			display: block;
+
+			@include media ("<phone"){
+				display: none;
+			}
+		}
+	}
+
+	a{
+		color: $color15;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+
+.dropdown-toggle{
+	&.caret,
+	&:after{
+		display: none;
+	}
+}
+
+.language-dropwdown{
+
+	&.dropup{
+		.dropdown-menu{
+			display: block;
+		}
+	}
+
+	.dropdown-toggle{
+		padding: 0 0 0 30px;
+		height: auto;
+		line-height: inherit;
+		background: none;
+		position: relative;
+		border-radius: 0;
+
+		&.caret,
+		&:after{
+			display: none;
+		}
+
+		img {
+			width: 20px;
+			margin: 0 5px 0 0;
+			position: absolute;
+			top: 3px;
+			left: 0;
+		}
+	}
+
+	.dropdown-menu{
+		background: $color1;
+		@include shadow1;
+		border: none;
+		transform: none !important;
+		left: 0 !important;
+		right: auto !important;
+		min-width: auto !important;
+		width: 150px !important;
+		top: 100% !important;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 18px;
+
+		li{
+			border-bottom: 1px solid rgba(255,255,255,0.30);
+
+			&:last-child{
+				border: none;
+			}
+		}
+
+		a{
+			display: block;
+			padding: 6px 10px;
+			color: #fff;
+			position: relative;
+
+
+			img {
+				width: 20px;
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+}
+
+.gender-list{
+	@include flex-align-center;
+
+	&.large{
+		.gender-box{
+			.form-check-label{
+				width: 300px;
+				height: 180px;
+				@include flex-align-center;
+				flex-direction: column;
+
+				@include media ("<tablet-x"){
+					width: 150px;
+					height: 150px;
+				}
+
+				@include media ("<phone"){
+					width: 90px;
+					height: 90px;
+				}
+
+				i{
+					width: 70px;
+					height: 70px;
+					font-size: 50px;
+
+					@include media ("<phone"){
+						width: 50px;
+						height: 50px;
+						font-size: 35px;
+					}
+				}
+			}
+		}
+	}
+
+
+	.gender-box{
+		margin: 5px;
+		position: relative;
+		overflow: hidden;
+
+		.form-check-input{
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+
+			&:checked ~{
+				.form-check-label{
+					border-color: #fff;
+				}
+			}
+		}
+
+		.form-check-label{
+			width: 75px;
+			height: 75px;
+			display: block;
+			border-radius: 10px;
+			background: $color16;
+			text-align: center;
+			padding: 10px;
+			font-size: 12px;
+			margin: 0;
+			border: 2px solid transparent;
+		}
+
+		i{
+			width: 30px;
+			height: 30px;
+			margin: 0 auto;
+			@include flex-align-center;
+			font-size: 18px;
+		}
+	}
+}
+
+.nav-opener{
+	float: right;
+	width: 40px;
+	height: 40px;
+}
+
+#sidebar{
+	position: fixed;
+	top: 54px;
+	left: 0;
+	overflow: hidden;
+	width: 270px;
+	float: left;
+	background: $color2;
+	height: 100vh;
+	padding: 15px;
+	@include linear;
+	z-index: 100;
+
+	@include media ("<tablet-x"){
+		left: -280px;
+	}
+
+
+	.nav{
+		@extend %listreset;
+		position: relative;
+		display: block;
+		padding: 20px 0;
+		border-top: 1px solid $color16;
+
+		li{
+			display: block;
+			margin: 0 0 10px;
+
+			&:last-child{
+				margin: 0;
+			}
+
+			&.active{
+				a{
+					background: $color3;
+				}
+			}
+		}
+
+		a{
+			display: block;
+			padding: 10px 15px 10px 60px;
+			position: relative;
+			height: 44px;
+			border-radius: 25px;
+			color: #fff;
+
+			&:hover{
+				background: $color3;
+			}
+
+			&.logout{
+
+
+				i{
+					background: $color9;
+				}
+
+				&:hover{
+					background: $color9;
+
+					i{
+						background: $color16;
+					}
+				}
+			}
+
+
+			i{
+				width: 32px;
+				height: 32px;
+				display: block;
+				border-radius: 50%;
+				background: $color16;
+				color: #fff;
+				@include flex-align-center;
+				font-size: 16px;
+				position: absolute;
+				top: 5px;
+				left: 8px;
+				@include ease;
+
+			}
+		}
+	}
+}
+
+.active-status{
+	position: absolute;
+	top: 0;
+	right: -5px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 2px solid $color2;
+}
+
+#content{
+	overflow: hidden;
+	min-height: calc(100vh - 54px);
+	padding: 80px 0 15px 270px;
+
+	@include media ("<tablet-x"){
+		padding: 135px 0 15px;
+	}
+	.container-fluid{
+		padding: 0 15px;
+		overflow: hidden;
+
+		@include media ("<tablet-x"){
+			padding: 0 5px;
+		}
+	}
+}
+
+.content{
+	overflow: hidden;
+}
+
+.user-img{
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 0 auto 10px;
+
+	img{
+	  	@include img-reset;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+}
+
+.user-profile{
+	position: relative;
+	padding: 15px 0;
+
+	.user-title{
+		font-size: 18px;
+	}
+
+
+}
+
+.user-title{
+	@include flex-align-center;
+
+	.verified{
+		margin: 0 0 0 10px;
+	}
+
+}
+
+.points-box{
+	position: relative;
+	overflow: hidden;
+	@include flex-align-center;
+
+	.col{
+		padding: 0 15px;
+		margin: 15px 0;
+		border-right:1px solid $color16;
+
+		&:last-child{
+			border: none;
+		}
+
+		.box{
+			overflow: hidden;
+		}
+
+		i{
+			float: left;
+			margin: 0 5px 0 0;
+			font-size: 18px;
+			line-height: 20px;
+		}
+
+	}
+}
+
+.matching-section{
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 15px;
+	border-bottom: 1px solid $color16;
+
+	.col1{
+		padding: 0 15px;
+		float: left;
+		height: 84px;
+		@include flex-align;
+		width: 150px;
+
+		@include media ("<tablet-x"){
+			float: none;
+			height: auto;
+			width: 100%;
+			padding: 15px 0 0;
+		}
+	}
+
+	.col2{
+		border-left: 1px solid $color16;
+		padding: 0 15px;
+		overflow: hidden;
+
+		@include media ("<tablet-x"){
+			border: none;
+			padding: 0;
+		}
+	}
+}
+
+.matching-list{
+	@extend %listreset;
+	position: relative;
+	@include flex-align;
+	overflow: hidden;
+
+	@include media ("<tablet-x"){
+		overflow-x: scroll;
+		padding: 0 0 5px;
+		align-items: flex-start;
+	}
+
+
+	&:hover{
+		margin: 0 0 -15px;
+		overflow-x: scroll;
+
+		@include media ("<tablet-x"){
+			margin: 0;
+		}
+
+		li, .col{
+			padding: 8px 8px 6px;
+
+			@include media ("<tablet-x"){
+				padding: 8px;
+			}
+		}
+	}
+
+	.col,
+	li{
+		padding: 8px;
+		position: relative;
+		text-align: center;
+		min-width: 95px;
+
+		@include media ("<tablet-x"){
+			min-width: auto;
+			width: 70px;
+		}
+
+
+		a{
+			display: block;
+		}
+
+		.user-img{
+			width: 45px;
+			height: 45px;
+			position: relative;
+			margin: 0 auto 5px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			background: #fff;
+
+			img{
+
+			}
+		}
+
+		.active-status{
+			border-color: $color1;
+		}
+
+		.title{
+			@include media ("<tablet-x"){
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.card-section{
+	@include media ("<tablet-x"){
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.card{
+	border: none;
+	background: none;
+	max-width: 450px;
+	margin: 0 auto;
+
+	@include media ("<tablet-x"){
+		max-width: 100%;
+	}
+
+	.card-body{
+		padding: 0;
+		position: relative;
+		background: $color2;
+	}
+
+	.card-header{
+		position: relative;
+		overflow: hidden;
+		border: none;
+		border-radius: 0 0 10px 10px;
+
+		&:after{
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 20px;
+			background: $color1;
+			-webkit-box-shadow: 0px 0px 22px 30px #000532;
+			-moz-box-shadow: 0px 0px 22px 30px #000532;
+			box-shadow: 0px 0px 22px 30px #000532;
+			z-index: -1;
+			border-radius: 0 0 10px 10px;
+		}
+	}
+
+	.user-title{
+		font-size: 24px;
+		justify-content: left;
+	}
+
+	.title-footer{
+		@include flex-align;
+		justify-content: space-between;
+		padding: 10px 0 0;
+
+		.badge-box{
+			width: 30px;
+
+			img{
+				@include img-reset;
+			}
+		}
+
+		.icon-box{
+			font-size: 22px;
+		}
+	}
+
+	.icon-box{
+		width: 30px;
+		height: 30px;
+		@include flex-align-center;
+		font-size: 30px;
+		margin: 0 10px 0 0;
+	}
+
+	.layout{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+
+
+	}
+
+	.img-box{
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+
+	}
+
+	.card-footer{
+		border: none;
+		padding: 10px 15px;
+		background: $color2;
+		border-radius: 0 0 10px 10px;
+		overflow: hidden;
+
+		.icon-box{
+			font-size: 16px;
+		}
+
+		> .space-between{
+			@include media ("<xs-phone"){
+				align-items: flex-start;
+			}
+
+			.space-between{
+				justify-content: flex-start;
+
+				@include media ("<xs-phone"){
+					justify-content: flex-start;
+				}
+			}
+		}
+
+		.col{
+			&:first-child{
+				padding: 0 20px 0 0;
+
+				@include media ("<xs-phone"){
+					padding: 0;
+				}
+			}
+
+			&:last-child{
+				padding: 0 0 0 20px;
+
+				@include media ("<xs-phone"){
+					padding: 0;
+				}
+			}
+		}
+
+
+	}
+
+	.btn-row{
+		@include flex-align;
+		justify-content: space-between;
+		padding: 15px 0;
+
+		.btn{
+			min-width: 47%;
+		}
+	}
+}
+
+.signal-card{
+	overflow: hidden;
+
+	.btn-list{
+		.btn{
+			@include media ("<widescreen"){
+				padding: 0;
+				width: 40px;
+
+				span{
+					display: none;
+				}
+
+				i{
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.icon-list{
+	@extend %listreset;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 15px;
+
+	&.fixed{
+		.description{
+			padding: 0 50px 0 0;
+			position: relative;
+
+			.view{
+				position: absolute;
+				top: 10px;
+				right: 0;
+			}
+		}
+	}
+
+
+	&.message{
+		margin: 0 -15px;
+
+		li{
+			padding: 10px 10px 10px 60px;
+			background: none;
+			border-bottom: 1px solid $color16;
+			border-radius: 0;
+		}
+	}
+
+	&.large{
+		li{
+			padding: 7px 10px 7px 60px;
+			margin: 0 0 5px;
+		}
+
+		.img-box{
+			width: 45px;
+		}
+
+		.description{
+			min-height: 57px;
+
+
+		}
+	}
+
+	&.list1{
+		li{
+			background: none;
+			padding: 15px 15px 15px 60px;
+			border-bottom: 1px solid $color16;
+			border-radius: 0;
+
+			@include media ("<tablet-x"){
+				padding: 15px 0 15px 50px;
+			}
+
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+
+		.icon-box{
+			width: 34px;
+			height: 34px;
+			background: $color16;
+			border-radius: 5px;
+			top: 18px;
+
+
+		}
+
+		.description{
+			padding-right: 50px;
+		}
+
+		.view{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	li{
+		display: block;
+		padding: 5px 10px 5px 50px;
+		position: relative;
+		background: $color16;
+		margin: 0 0 1px;
+		border-radius: 5px;
+		overflow: hidden;
+
+		@include media ("<tablet-x"){
+			padding: 5px 0 5px 40px;
+		}
+
+
+		> a{
+			color: #fff;
+		}
+	}
+
+
+
+	.img-box,
+	.icon-box{
+		width: 30px;
+		position: absolute;
+		top: 7px;
+		left: 9px;
+		color: #fff;
+		font-size: 16px;
+		@include flex-align-center;
+
+	}
+
+	.icon-box{
+		height: 30px;
+	}
+
+	.user-img{
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 12px;
+		left: 9px;
+		margin: 0;
+
+	}
+
+	.description{
+		overflow: hidden;
+		@include flex-align;
+		justify-content: space-between;
+		font-size: 12px;
+		min-height: 40px;
+		position: relative;
+
+		.btn{
+			float: right;
+		}
+
+		.text{
+			overflow: hidden;
+		}
+
+		p{
+			margin: 0;
+		}
+
+		.transparent{
+			background: none;
+			padding: 0;
+			border: none;
+			width: 30px;
+			height: 30px;
+			@include flex-align-center;
+			font-size: 16px;
+
+			i{
+				margin: 0;
+				top: 0;
+				font-size: 18px;
+			}
+		}
+
+		.view{
+			margin: 0 0 0 10px;
+		}
+	}
+
+	.info{
+		width: 60px;
+		text-align: right;
+	}
+
+	.title{
+		font-size: 14px;
+
+		a{
+			color: #fff;
+		}
+	}
+
+
+
+}
+
+.tabset{
+	position: relative;
+	@extend %listreset;
+	display: flex;
+	width: 100%;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	text-align: center;
+	align-items: flex-end;
+	border-bottom: 1px solid $color16;
+
+	@include media ("<tablet"){
+		overflow-x: scroll;
+	}
+
+	&.tab-btn{
+		border: none;
+		margin: 0 -5px;
+
+		li{
+			margin: 5px;
+			&.active{
+				a{
+					background: $color3;
+					color: #fff;
+				}
+			}
+		}
+
+		a{
+			background: $color16;
+			border: none;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+			min-width: 150px;
+		}
+	}
+
+	li{
+		flex: 0 0 auto;
+
+		&.active{
+			a{
+				color: $color4;
+				border-color: $color4;
+			}
+		}
+	}
+
+	a{
+		display: block;
+		padding: 5px 10px;
+		border-bottom: 3px solid transparent;
+
+	}
+
+}
+
+.left-sidebar,
+.right-sidebar{
+	width: 300px;
+	float: right;
+	margin: 0;
+	border-radius: 10px 0 0 0;
+	min-height: calc(100vh - 90px);
+
+	@include media ("<widescreen"){
+		width: 270px;
+		margin: 0 -15px 0 0;
+	}
+
+	@include media ("<tablet-x"){
+		width: 100%;
+		float: none;
+		min-height: auto;
+		overflow: hidden;
+
+	}
+
+	&:after{
+		position: absolute;
+		content: '';
+		top: 100%;
+		height: 9999px;
+		left: 0;
+		right: 0;
+		background: $color2;
+
+		@include media ("<tablet-x"){
+			display: none;
+		}
+
+	}
+
+	.tab-content{
+		padding: 15px 0;
+
+		@include media ("<tablet"){
+			padding: 15px 0;
+		}
+	}
+
+	.tabset{
+		li{
+			flex: 0 0 50%;
+		}
+	}
+
+
+
+	.scrollbar{
+		margin: 0 -15px;
+
+		@include media ("<tablet-x"){
+			margin: 0;
+			max-height: 300px;
+		}
+
+
+		.scrollbar-content{
+
+			.icon-list{
+				&.message{
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.search-form{
+		.form-group{
+			margin: 0 0 10px;
+		}
+	}
+
+}
+
+.search-form{
+  position: relative;
+
+  .form-group{
+	  position: relative;
+	  margin: 0;
+  }
+
+  .form-control{
+	  padding: 0 50px 0 15px;
+  }
+
+  .btn{
+	  position: absolute;
+	  width: 40px;
+	  height: 40px;
+	  top: 1px;
+	  right: 1px;
+	  padding: 0;
+	  background: none;
+  }
+}
+
+.left-sidebar{
+  	float: left;
+	margin: 0 15px 0 0;
+	border-radius: 10px 10px 0 0;
+
+	@include media ("<tablet-x"){
+		width: 100%;
+		float: none;
+		min-height: auto;
+		overflow: hidden;
+		margin: 0 0 15px;
+	}
+
+	.content-box{
+		border-radius: 10px 10px 0 0;
+	}
+}
+
+.scrollbar{
+  	height: calc(100vh - 208px);
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.modal{
+
+
+	.btn-close{
+		color: rgba(255,255,255,0.6);
+		opacity: 1;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: none;
+		@include flex-align-center;
+		padding: 0;
+		line-height: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 15px;
+
+		&:focus{
+			box-shadow: none;
+			outline: none;
+		}
+
+		&:hover{
+			color: $color7;
+		}
+
+		i{
+			margin: 0;
+			font-size: 20px;
+			top: 0;
+		}
+	}
+
+	.modal-sm{
+		max-width: 430px;
+
+	}
+
+	.modal-content{
+		background: $color2;
+		padding: 50px 0 0;
+		border: none;
+		border-radius: 10px;
+	}
+
+	form{
+		textarea,
+		select,
+		.form-select,
+		.form-control{
+			border-radius: 10px;
+			background: $color16;
+			border-color: transparent;
+		}
+	}
+}
+
+.circle-list{
+	@extend %listreset;
+	position: relative;
+	overflow: hidden;
+	letter-spacing: -5px;
+	margin: 0 0 50px;
+
+	&.large{
+
+		li{
+			width: 50%;
+		}
+
+		.icon-box{
+			width: 65px;
+			height: 65px;
+			font-size: 26px;
+			line-height: 30px;
+
+			&:after{
+				position: absolute;
+				content: "\f00c";
+				display: block;
+				text-align: center;
+				line-height: 22px;
+				top: 0;
+				right: 0;
+				border-radius: 50%;
+				background: $color12;
+				font-family: "Font Awesome 5 Pro";
+				color: $color1;
+				font-size: 13px;
+				width: 22px;
+				height: 22px;
+			}
+		}
+
+	}
+
+
+
+
+	li{
+		display: inline-block;
+		vertical-align: top;
+		padding: 5px;
+		letter-spacing: 0;
+
+	}
+
+	.icon-box{
+		@include flex-align-center;
+		border-radius: 50%;
+		color: #fff;
+		background: $color16;
+		position: relative;
+		margin: 0 auto;
+		text-align: center;
+		width: 35px;
+		height: 35px;
+		font-size: 16px;
+		line-height: 20px;
+
+		&.border{
+			border: 1px solid $color16 !important;
+			background: none;
+			color: inherit;
+		}
+	}
+}
+
+.camera-box{
+	background: $color1;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	min-height: 450px;
+	margin: 0 0 15px;
+
+	.circle-list{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 20px 0;
+	}
+
+	img{
+		@include img-reset;
+	}
+
+	.camera{
+		border-radius: 10px;
+		overflow: hidden;
+	}
+}
+
+.camera-btn{
+	width: 65px;
+	height: 65px;
+	display: block;
+	margin: 0 auto;
+	background: $color3;
+	border-radius: 50%;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+
+	&:after{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border: 2px solid $color2;
+		border-radius: 50%;
+		margin: 5px;
+	}
+}
+
+.chat-box{
+	position: relative;
+	background: $color2;
+	border-radius: 10px 10px 0 0;
+	padding: 0 0 80px;
+	overflow-y: hidden;
+	height: calc(100vh - 90px);
+
+	@include media ("<tablet-x"){
+		height: auto;
+		max-height: calc(100vh - 90px);
+	}
+
+
+}
+
+.header-bar{
+	position: relative;
+
+	&.align{
+		.user-profile{
+			margin: 0;
+			padding: 15px;
+			text-align: left;
+			background: $color16;
+
+			.user-img{
+				width: 40px;
+				height: 40px;
+				margin: 0 15px 0 0;
+				float: left;
+			}
+
+			.user-title{
+				justify-content: start;
+				font-size: 16px;
+				min-height: 40px;
+				margin: 0 !important;
+			}
+		}
+	}
+
+	.user-profile{
+		margin: 30px auto;
+		text-align: center;
+		border-bottom: 1px solid $color16;
+		position: relative;
+
+		.user-img{
+			width: 90px;
+			height: 90px;
+			margin: 0 auto 20px;
+		}
+	}
+
+	.dropdown {
+		float: right;
+	}
+
+
+
+}
+
+.dropdown{
+
+	.dropdown-opener{
+		width: 34px;
+		height: 34px;
+		background: $color16;
+		color: #fff;
+		border-radius: 50%;
+		@include flex-align-center;
+	}
+}
+
+.dropdown-menu{
+	font-size: 12px;
+	line-height: 16px;
+	border: none;
+	background: $color3;
+	min-width: 160px;
+
+	li{
+		border-bottom: 1px solid $color16;
+
+		&:last-child{
+			border: none;
+		}
+	}
+
+	a{
+		display: block;
+		padding: 5px 10px;
+		font-weight: 400;
+		color: #fff;
+
+	}
+}
+
+.slimScrollDiv{
+	height: calc(100vh - 230px) !important;
+
+	.scrollar{
+		height: 100% !important;
+	}
+
+	.slimScrollBar{
+		background-color: #fff !important;
+		width: 4px !important;
+	}
+}
+
+.chat-list{
+	@extend %listreset;
+	position: relative;
+	overflow: hidden;
+
+	@include media ("<tablet-x"){
+		height: auto;
+		max-height: 460px;
+	}
+
+
+	li{
+		display: block;
+		padding: 15px;
+
+		@include media ("<tablet-x"){
+			padding: 5px 7px;
+		}
+	}
+
+	.message{
+		border: 1px solid $color16;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.sender{
+		text-align: right;
+
+		.message{
+			background: $color3;
+			padding: 8px 15px;
+			border-radius: 20px 0 20px 20px;
+			border-color: $color3;
+			text-align: left;
+		}
+	}
+
+	.receiver{
+		text-align: left;
+
+		.message{
+			padding: 10px 15px;
+			border-radius: 0 20px 20px 20px ;
+		}
+	}
+}
+
+.chat-text-box{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	padding: 15px;
+
+	@include media ("<tablet-x"){
+		padding: 15px 5px;
+	}
+
+	form{
+  		padding: 0 75px 0 0;
+		position: relative;
+
+		@include media ("<tablet-x"){
+			padding: 0 45px 0 0;
+		}
+
+		.form-group{
+			position: relative;
+			margin: 0;
+
+			.form-control{
+				padding: 0 50px;
+				border-color: transparent;
+				background: $color16;
+			}
+		}
+
+		.mic,
+		.smiles{
+			display: block;
+			position: absolute;
+			top: 6px;
+			width: 35px;
+			height: 30px;
+			@include flex-align-center;
+			color: #fff;
+		}
+
+		.mic{
+			right: 10px;
+			font-size: 20px;
+		}
+
+		.smiles{
+			left: 5px;
+			font-size: 18px;
+			border-right: 1px solid $color16;
+		}
+
+		.btn{
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			@include media ("<tablet-x"){
+				width: 40px;
+				padding: 0;
+				height: 40px;
+
+			}
+
+			i{
+				margin: 0;
+			}
+		}
+	}
+
+
+}
+
+.alert{
+	border-radius: 0;
+	border: none;
+	margin: 15px 0;
+
+	&.verify{
+		background: $color16;
+	}
+}
+
+.interactions{
+	overflow: hidden;
+
+	.tab-content{
+		background: $color2;
+		margin: 20px 0 0;
+
+		@include media ("<tablet"){
+			background: none;
+		}
+	}
+}
+
+
+.box-list{
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+
+	@include media ("<tablet"){
+
+		padding: 0;
+	}
+
+	&.package2,
+	&.package{
+
+		padding: 0;
+
+		.col{
+			flex: 0 0 50%;
+			padding: 2px;
+
+			@include media ("<widescreen"){
+				flex: 0 0 100%;
+			}
+		}
+
+		.box{
+			background: $color16;
+			text-align: center;
+			padding: 15px;
+			border-radius: 5px;
+			overflow: hidden;
+			height: 100%;
+		}
+
+		.title{
+			padding: 0 0 15px;
+			margin: 0 0 15px;
+			border-bottom: 1px solid $color16;
+		}
+
+		.footer{
+			margin: 15px -15px -15px;
+			padding: 10px;
+			background: $color3;
+
+		}
+
+
+	}
+
+	&.package2{
+		.title{
+			padding: 0;
+			margin: 0 0 15px;
+			border: none;
+		}
+
+	}
+
+	&.photo{
+		.col{
+			flex: 0 0 16.66%;
+			padding: 5px;
+
+			@include media ("<widescreen"){
+				padding: 2px;
+				flex: 0 0 25%;
+			}
+
+			@include media ("<tablet-x"){
+				flex: 0 0 33.3%;
+			}
+
+			@include media ("<tablet"){
+				flex: 0 0 50%;
+			}
+		}
+
+		.card {
+			background: $color1;
+			height: 100%;
+			border-radius: 10px;
+			overflow: hidden;
+
+			.img-box{
+				height: 100%;
+			}
+		}
+	}
+
+	.col{
+		flex: 0 0 25%;
+		padding: 10px;
+
+		@include media ("<widescreen"){
+			padding: 2px;
+			flex: 0 0 33.3%;
+		}
+
+		@include media ("<tablet-x"){
+			padding: 2px;
+		}
+
+		@include media ("<tablet"){
+			flex: 0 0 50%;
+		}
+	}
+
+
+	.card{
+
+		border-radius: 10px;
+		overflow: hidden;
+
+
+		.card-header{
+			@include flex-align;
+			border-bottom: 1px solid $color16;
+			border-radius: 0;
+			padding: 10px 0;
+			border-radius: 0;
+		}
+
+		.card-footer{
+			padding: 10px 0;
+			background: none;
+			border-radius: 0;
+			overflow: hidden;
+		}
+
+		.img-box{
+			height: 350px;
+			background-repeat: no-repeat;
+			background-position: center 0;
+			background-size: cover;
+
+			@include media ("<tablet"){
+				height: 200px;
+				border-radius: 5px 5px 0 0;
+			}
+		}
+
+		.card-body{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: $color17;
+			border-radius: 10px 10px 0 0;
+			padding: 0 10px;
+
+			@include media ("<tablet"){
+				position: relative;
+				border-radius: 0 0 5px 5px;
+			}
+		}
+
+		.icon-box{
+			width: 30px;
+			height: 30px;
+			@include flex-align-center;
+		}
+
+		.description{
+			overflow: hidden;
+		}
+
+		.icon-list{
+			@include flex-align;
+			margin: 0;
+			flex-wrap: wrap;
+			margin: 0 -3px;
+
+			li{
+				padding: 0;
+				background: none;
+				flex-grow: 1;
+				flex-basis: 0;
+				margin: 0 3px;
+
+				a{
+					height: 30px;
+					@include flex-align-center;
+					border-radius: 20px;
+					padding: 0 10px;
+					font-size: 14px;
+					line-height: 16px;
+
+					i{
+						margin: 0;
+						top: 0;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.dropdown{
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 10px;
+
+			.dropdown-opener{
+				background: rgba(0,0,0,0.3);
+			}
+
+		}
+	}
+}
+
+.section-searchbar{
+	position: relative;
+	overflow: hidden;
+	padding: 20px 0 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	@include flex-align;
+
+	.col1 {
+		padding: 0 15px;
+		float: left;
+	}
+
+	.col2 {
+		padding: 0 15px;
+		overflow: hidden;
+	}
+}
+
+.accordion{
+	@extend %listreset;
+	position: relative;
+	overflow: hidden;
+	margin: 15px 0;
+
+	li{
+		display: block;
+		margin: 0 0 5px;
+
+		&.active{
+			.opener{
+				border-radius: 10px 10px 0 0;
+
+				&:after{
+					content: "\f106";
+				}
+			}
+		}
+	}
+
+	.opener{
+		display: block;
+		border-radius: 10px;
+		overflow: hidden;
+		background: $color2;
+		color: #fff;
+		padding: 10px 35px 10px 15px;
+		position: relative;
+		@include ease;
+
+		&:after{
+			position: absolute;
+			content: "\f107";
+			font-family: "Font Awesome 5 Pro";
+			top: 0;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			@include flex-align-center;
+			margin: 6px;
+		}
+	}
+
+	.slide{
+		padding: 15px;
+		background: $color2;
+		margin: 1px 0 0;
+		border-radius: 0 0 10px 10px;
+		overflow: hidden;
+
+	}
+}
+
+.chat-bot-holder{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	margin: 0 15px 100px;
+	z-index: 99;
+
+	@include media ("<tablet"){
+		margin: 15px;
+	}
+
+	&.chatbot-active{
+		.btn-popup{
+			i{
+				&:before{
+					content: "\e90e";
+				}
+			}
+		}
+
+		.chat-bot{
+			display: block;
+		}
+	}
+
+
+}
+
+
+.chat-bot{
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	width: 350px;
+	background: $color2;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 0 0 70px;
+	margin: 0 0 10px;
+	display: none;
+
+	@include media ("<tablet"){
+		width: 320px;
+		right: -15px;
+	}
+
+	.chat-list {
+		font-size: 12px;
+		line-height: 16px;
+		height: 350px;
+		overflow: hidden;
+		overflow-y: scroll;
+		margin: 0 -14px 0 0;
+
+		@include media ("<tablet"){
+			margin: 0;
+		}
+
+		li{
+			padding: 5px 10px;
+			position: relative;
+			flex-direction: column;
+		}
+
+		time{
+			font-size: 11px;
+			line-height: 15px;
+			color: $color14;
+			display: block;
+		}
+
+		.message{
+			padding: 10px;
+			display: block;
+			width: 100%;
+			letter-spacing: 0.5px;
+		}
+
+		.sender{
+			padding: 5px 50px;
+
+			.user-img{
+				right: 0;
+			}
+		}
+
+		.receiver{
+			padding: 5px 50px ;
+
+			.message{
+				background: $color1;
+			}
+
+
+
+			.user-img{
+				left: 0;
+			}
+
+		}
+
+		.user-img{
+			margin: 0 10px;
+			position: absolute;
+			top: 5px;
+			border: 1px solid #fff;
+
+
+		}
+
+
+	}
+
+	.user-img{
+		width: 30px;
+		height: 30px;
+		margin: 0;
+		background: $color1;
+		border-radius: 50%;
+	}
+
+	.header-bar{
+		position: relative;
+		padding: 10px;
+		background: $color16;
+		@include flex-align;
+		justify-content: space-between;
+
+		.user-img{
+			margin: 0 5px 0 0;
+			width: 30px;
+			height: 30px;
+
+		}
+
+	}
+
+	.chat-text-box {
+		padding: 10px;
+
+		form {
+			padding: 0 50px 0 0;
+
+			.btn{
+				padding: 0;
+				width: 40px;
+			}
+		}
+	}
+}
+
+.section-banner1,
+.section-banner{
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	@include flex-align;
+	flex-wrap: wrap;
+	padding: 50px;
+	background: linear-gradient(170.86deg, #B175FF -34.05%, #000532 106.03%);
+	margin: 0 0 30px;
+
+	@include media ("<phone"){
+		padding: 15px;
+		display: block;
+	}
+
+	.col{
+		flex: 1 0 0%;
+	}
+}
+
+.section-banner1{
+	background: $color16;
+	display: block;
+	padding: 25px;
+}
+table,
+.table{
+	color: #fff;
+	border-collapse: separate;
+	border-spacing:0 5px;
+
+	&.table2{
+
+	}
+
+	&.table1{
+		th{
+			background: $color16;
+		}
+
+		td{
+			padding: 3px 5px;
+		}
+
+		.fal{
+			background: $color16;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			border-radius: 6px;
+			margin: 0 5px;
+		}
+
+
+	}
+
+	td,
+	th{
+		font-weight: 400;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	tr{
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 0 5px;
+		width: 100%;
+
+		td,
+		th{
+			padding: 10px;
+
+			&:first-child{
+				border-radius: 10px 0 0 10px;
+			}
+
+			&:last-child{
+				border-radius: 0 10px 10px 0;
+			}
+		}
+	}
+
+
+
+
+	th{
+		color: $color14;
+		background: $color2;
+		border: none;
+	}
+
+	tbody{
+		td{
+			border-top: 1px solid $color16;
+			border-bottom: 1px solid $color16;
+
+			&:first-child{
+				border-left: 1px solid $color16;
+			}
+
+			&:last-child{
+				border-right: 1px solid $color16;
+			}
+		}
+	}
+
+	.user-img{
+		width: 30px;
+		height: 30px;
+		display: block;
+		margin: 0;
+	}
+
+
+}
+
+
+.applist-slider{
+	position: relative;
+	padding: 10px 35px 0;
+
+	@include media ("<tablet-x"){
+		padding: 10px 0 0;
+	}
+
+	.user-img{
+		margin: 5px 10px;
+
+		@include media ("<tablet-x"){
+			margin: 5px 2px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.slick-prev,
+	.slick-next{
+		@include flex-align-center;
+		color: #fff;
+		background: none;
+
+		i{
+			margin: 0;
+		}
+	}
+
+	.slick-prev{
+		left: 0;
+
+		@include media ("<tablet-x"){
+			left: -18px;
+		}
+	}
+	.slick-next{
+		right: 0;
+
+		@include media ("<tablet-x"){
+			right: -18px;
+		}
+	}
+}
+
+.profile-section{
+	.content-box{
+		padding: 15px;
+	}
+}
+
+.photo-list{
+	@extend %listreset;
+	position: relative;
+	padding: 15px 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	overflow-x: scroll;
+
+	.col{
+		flex: 0 0 auto;
+		padding: 2px;
+		width: 80px;
+		height: 80px;
+	}
+
+	.img-box{
+		border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.play-btn{
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		color: #fff;
+		overflow: hidden;
+		@include flex-align-center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		font-size: 30px;
+	}
+
+
+}
+
+.couner-text{
+  width: 120px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.badge-list{
+  position: relative;
+  @extend %listreset;
+  text-align: center;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid $color16;
+
+  li{
+	  width: 50px;
+	  display: inline-block;
+	  vertical-align: top;
+	  margin: 3px;
+  }
+
+}
+
+.userdetail-list{
+  position: relative;
+  @extend %listreset;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid $color16;
+
+  li{
+	  position: relative;
+	  padding: 0 0 0 40px;
+	  margin: 0 0 10px;
+	  @include flex-align;
+	  min-height: 30px;
+
+	  &:last-child{
+		  margin: 0;
+	  }
+
+	  i{
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 30px;
+		  height: 30px;
+		  @include flex-align-center;
+	  }
+  }
+}
+
+.tag-list{
+  position: relative;
+
+  .tag{
+	  display: inline-block;
+	  vertical-align: top;
+	  padding: 5px 15px;
+	  border-radius: 15px;
+	  margin: 2px;
+  }
+}
+
+.upload{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include flex-align-center;
+
+	i{
+		width: 34px;
+		height: 34px;
+		@include flex-align-center;
+		background: $color16;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+
+.switcher-holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0 10px;
+	width: 100%;
+
+	.switcher {
+		position: relative;
+		height: 42px;
+		background: $color16;
+		overflow: hidden;
+		border-radius: 21px;
+		display: block;
+		line-height: 42px;
+		width: 100%;
+
+		.col2,
+		.col1{
+			width: 50%;
+			float: left;
+			text-align: center;
+			padding: 0 25px;
+			position: relative;
+			z-index: 1;
+			color: #fff;
+			@include ease;
+		}
+
+		.slider {
+			@include ease;
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: $color3;
+			z-index: 0;
+			width: 50%;
+			border-radius: 21px;
+		}
+	}
+
+	input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+		position: absolute;
+
+		&:checked ~ {
+			.slider {
+				left: 51%;
+			}
+		}
+	}
+}
+
+.time-counter{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px;
+}
+
+.gift-list{
+	@extend %listreset;
+	position: relative;
+	margin: 0 -10px;
+
+	@include media ("<tablet-x"){
+		margin: 0 0 15px;
+	}
+
+	@include media ("<tablet-x"){
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		overflow-x: scroll;
+		padding: 0 0 10px;
+
+	}
+
+	.col{
+		width: 16.66%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 10px;
+		height: 150px;
+		margin: 0 -2px;
+
+		@include media ("<tablet-x"){
+			padding: 2px;
+			margin: 0;
+		}
+
+		@include media ("<tablet"){
+			flex: 0 0 auto;
+			width: 100px;
+			height: 100px;
+		}
+
+
+		.box{
+			border-radius: 10px;
+			background: $color16;
+			@include flex-align-center;
+			flex-direction: column;
+			height: 100%;
+			text-align: center;
+			color: #fff;
+			text-transform: capitalize;
+			position: relative;
+		}
+
+		.icon-box{
+			width: 50px;
+			height: 50px;
+			@include flex-align-center;
+			font-size: 25px;
+
+			@include media ("<tablet"){
+				width: 40px;
+				height: 40px;
+				font-size: 20px;
+			}
+		}
+	}
+
+}
+
+.user-profile-nav{
+	margin: 0 -15px;
+	background: $color16;
+
+	ul{
+		@extend %listreset;
+		position: relative;
+		overflow-y: hidden;
+
+		li{
+			display: block;
+			position: relative;
+			border-top: 1px solid $color16;
+
+			&:first-child{
+				border: none;
+			}
+
+			&.active{
+				a{
+					background: $color3;
+				}
+			}
+		}
+
+		a{
+			display: block;
+			padding: 10px 15px;
+			color: #fff;
+
+			&:hover{
+				background: $color3;
+			}
+
+		}
+	}
+}
+
+.column-list{
+	@extend %listreset;
+	position: relative;
+	overflow-y: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -5px;
+
+	&.col1{
+		li{
+			flex: 0 0 100%;
+		}
+	}
+
+
+	li{
+		flex: 0 0 50%;
+		padding: 5px;
+	}
+
+	.box{
+		position: relative;
+		overflow-y: hidden;
+		border-radius: 5px;
+		border: 1px solid $color16;
+		@include flex-align;
+		justify-content: space-between;
+		padding: 10px 15px;
+
+		.left{
+			@include flex-align;
+		}
+	}
+
+	.icon-box,
+	.img-box{
+		width: 30px;
+		margin: 0 10px 0 0;
+	}
+}
+
+
+.package-box{
+	position: relative;
+	margin: 0 -5px;
+
+	@include media ("<tablet"){
+		display: block;
+	}
+
+	> .col{
+		padding: 5px;
+
+
+	}
+
+	.content-box{
+		height: 100%;
+		padding-bottom: 70px;
+	}
+
+	.badge-box{
+		width: 100px;
+		margin: 0 auto 15px;
+
+		img{
+			@include img-reset;
+		}
+	}
+
+	.btn-footer{
+		position: absolute;
+		margin: 15px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+}
+
+
+
+
+.list{
+	@extend %listreset;
+	position: relative;
+
+	li{
+		display: block;
+		padding: 20px 0 20px 30px;
+		position: relative;
+		overflow: hidden;
+
+		&:after{
+			position: absolute;
+			content: '';
+			width: 9999px;
+			height: 1px;
+			background: $color16;
+			top: 0;
+			left: 30px;
+			display: block;
+			overflow: hidden;
+		}
+
+		&:before{
+			position: absolute;
+			content: '';
+			width: 7px;
+			height: 7px;
+			background: #fff;
+			top: 28px;
+			left: 0;
+			display: block;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		&:first-child{
+			&:after{
+				display: none;
+			}
+		}
+
+
+	}
+}
+
+.shop{
+	.content-box{
+
+		&.p-3{
+			.icon-list{
+				@include media ("<xs-phone"){
+					margin: 0 -10px 10px;
+				}
+			}
+
+			.table-responsive{
+				margin: 0 -10px;
+			}
+		}
+
+		.form-switch {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+
+			.form-check-label{
+				padding: 0 0 0 50px;
+			}
+		}
+	}
+}
+
+.messagesidebar-opener{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	width: 40px;
+	height: 40px;
+	background: $color12;
+	border-radius: 50%;
+	display: none;
+	z-index: 1;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	z-index: 99;
+
+	@include media ("<tablet-x"){
+		display: block;
+	}
+
+
+	.fa-comment-alt-dots{
+		position: absolute;
+		top: 9px;
+		right: 8px;
+		font-size: 16px;
+	}
+
+	.ico-phone-alt{
+		position: absolute;
+		top: 15px;
+		left: 6px;
+		font-size: 20px;
+		transform: rotate(-13deg);
+	}
+
+}
+
+
+.messagesidebar{
+	@include media ("<tablet-x"){
+		position: fixed;
+		top: 118px;
+		left: -102%;
+		@include linear;
+		width: calc(100% - 60px);
+		z-index: 9999;
+		background: $color2;
+		border-radius: 0;
+		height: calc(100vh - 118px);
+		overflow: hidden;
+		overflow-y: scroll;
+		padding: 0 10px;
+
+		.scrollbar{
+			max-height: none;
+			height: auto;
+		}
+
+		.search-form{
+			padding: 10px;
+		}
+
+	}
+}
+
+
+  @include media ("<tablet"){}
+
+
+

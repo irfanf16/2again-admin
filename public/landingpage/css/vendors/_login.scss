@@ -1,0 +1,63 @@
+#wrapper{
+	&.inner-page{
+		#footer{
+			padding: 20px 0;
+		}
+	}
+}
+
+
+.signup,
+.login{
+	@include flex-align;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: calc(100vh - 146px);
+	padding: 50px 0;
+
+
+	.logo{
+		float: none;
+		margin: 0 auto 10px;
+	}
+
+	.form{
+		position: relative;
+		max-width: 530px;
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 50px;
+		background: $basecolor1;
+
+
+
+		@include media ("<tablet"){
+			padding: 50px 15px;
+		}
+
+		.form-group{
+			margin: 0 0 15px;
+		}
+
+		.form-control{
+
+		}
+
+		.custom-control-label{
+			line-height: 25px;
+		}
+
+	}
+
+	.social-links{
+		text-align: center;
+	}
+
+	.forget-password{
+		display: flex;
+		justify-content: space-between;
+	}
+}

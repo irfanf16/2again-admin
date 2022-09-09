@@ -1,0 +1,378 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?mi6sgs');
+    src:  url('../fonts/icomoon.eot?mi6sgs#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?mi6sgs') format('truetype'),
+    url('../fonts/icomoon.woff?mi6sgs') format('woff'),
+    url('../fonts/icomoon.svg?mi6sgs#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-mood:before {
+    content: "\e95d";
+}
+.ico-reportin:before {
+    content: "\e951";
+}
+.ico-privacy_policy:before {
+    content: "\e952";
+}
+.ico-terms_use:before {
+    content: "\e953";
+}
+.ico-legal:before {
+    content: "\e954";
+}
+.ico-permission:before {
+    content: "\e955";
+}
+.ico-user_role:before {
+    content: "\e956";
+}
+.ico-system_user:before {
+    content: "\e957";
+}
+.ico-Union:before {
+    content: "\e958";
+}
+.ico-support_mail:before {
+    content: "\e959";
+}
+.ico-app_download:before {
+    content: "\e95a";
+}
+.ico-purchase:before {
+    content: "\e95b";
+}
+.ico-other_app:before {
+    content: "\e95c";
+}
+.ico-voucher:before {
+    content: "\e95e";
+}
+.ico-company:before {
+    content: "\e95f";
+}
+.ico-crowd_fund:before {
+    content: "\e960";
+}
+.ico-faqs_type:before {
+    content: "\e961";
+}
+.ico-faqs:before {
+    content: "\e962";
+}
+.ico-invitation:before {
+    content: "\e963";
+}
+.ico-gift:before {
+    content: "\e964";
+}
+.ico-app_translate:before {
+    content: "\e965";
+}
+.ico-user_status:before {
+    content: "\e966";
+}
+.ico-languages:before {
+    content: "\e967";
+}
+.ico-religions:before {
+    content: "\e968";
+}
+.ico-country:before {
+    content: "\e969";
+}
+.ico-safety:before {
+    content: "\e96a";
+}
+.ico-dictionary:before {
+    content: "\e96b";
+}
+.ico-app_setting:before {
+    content: "\e96c";
+}
+.ico-badge_star:before {
+    content: "\e96d";
+}
+.ico-setting:before {
+    content: "\e96e";
+}
+.ico-cart:before {
+    content: "\e96f";
+}
+.ico-user_lock:before {
+    content: "\e970";
+}
+.ico-user_slash:before {
+    content: "\e971";
+}
+.ico-user_cross:before {
+    content: "\e972";
+}
+.ico-app_user:before {
+    content: "\e973";
+}
+.ico-dashboard:before {
+    content: "\e974";
+}
+.ico-imageplaceholder-single:before {
+    content: "\e902";
+}
+.ico-education:before {
+    content: "\e945";
+}
+.ico-phone-ring:before {
+    content: "\e946";
+}
+.ico-email-circle:before {
+    content: "\e947";
+}
+.ico-usr-call:before {
+    content: "\e948";
+}
+.ico-gift-box:before {
+    content: "\e949";
+}
+.ico-imageplaceholder-alt:before {
+    content: "\e94a";
+}
+.ico-user-plus:before {
+    content: "\e94b";
+}
+.ico-speaker:before {
+    content: "\e94c";
+}
+.ico-video-call:before {
+    content: "\e94d";
+}
+.ico-videoplaceholder:before {
+    content: "\e94e";
+}
+.ico-imageplaceholder:before {
+    content: "\e94f";
+}
+.ico-badge:before {
+    content: "\e950";
+}
+.ico-user-detail:before {
+    content: "\e901";
+}
+.ico-apple:before {
+    content: "\e900";
+}
+.ico-arrow-down-left-long:before {
+    content: "\e903";
+}
+.ico-arrow-top-right-long:before {
+    content: "\e904";
+}
+.ico-avatar-dummy:before {
+    content: "\e905";
+}
+.ico-avatar-image:before {
+    content: "\e906";
+}
+.ico-badge-check:before {
+    content: "\e907";
+}
+.ico-bell:before {
+    content: "\e908";
+}
+.ico-cake:before {
+    content: "\e909";
+}
+.ico-camera-retake:before {
+    content: "\e90a";
+}
+.ico-check-circle:before {
+    content: "\e90b";
+}
+.ico-coin:before {
+    content: "\e90c";
+}
+.ico-couple:before {
+    content: "\e90d";
+}
+.ico-cross:before {
+    content: "\e90e";
+}
+.ico-cross-circle:before {
+    content: "\e90f";
+}
+.ico-dinner:before {
+    content: "\e910";
+}
+.ico-dots-vartical:before {
+    content: "\e911";
+}
+.ico-email:before {
+    content: "\e912";
+}
+.ico-eye:before {
+    content: "\e913";
+}
+.ico-facbook:before {
+    content: "\e914";
+}
+.ico-face:before {
+    content: "\e915";
+}
+.ico-female:before {
+    content: "\e916";
+}
+.ico-flower:before {
+    content: "\e917";
+}
+.ico-gender-other:before {
+    content: "\e918";
+}
+.ico-glass:before {
+    content: "\e919";
+}
+.ico-google-plus:before {
+    content: "\e91a";
+}
+.ico-hammer:before {
+    content: "\e91b";
+}
+.ico-heart:before {
+    content: "\e91c";
+}
+.ico-hearts:before {
+    content: "\e91d";
+}
+.ico-house:before {
+    content: "\e91e";
+}
+.ico-ico-cross-alt:before {
+    content: "\e91f";
+}
+.ico-id-card:before {
+    content: "\e920";
+}
+.ico-instagram:before {
+    content: "\e921";
+}
+.ico-kiss-lips:before {
+    content: "\e922";
+}
+.ico-left-circle:before {
+    content: "\e923";
+}
+.ico-logout:before {
+    content: "\e924";
+}
+.ico-male:before {
+    content: "\e925";
+}
+.ico-man:before {
+    content: "\e926";
+}
+.ico-messages:before {
+    content: "\e927";
+}
+.ico-messages-alt:before {
+    content: "\e928";
+}
+.ico-microphone:before {
+    content: "\e929";
+}
+.ico-node:before {
+    content: "\e92a";
+}
+.ico-paper-plane:before {
+    content: "\e92b";
+}
+.ico-peoples:before {
+    content: "\e92c";
+}
+.ico-phone:before {
+    content: "\e92d";
+}
+.ico-phone-alt:before {
+    content: "\e92e";
+}
+.ico-plane:before {
+    content: "\e92f";
+}
+.ico-question-circle:before {
+    content: "\e930";
+}
+.ico-quote:before {
+    content: "\e931";
+}
+.ico-refresh:before {
+    content: "\e932";
+}
+.ico-right-circle:before {
+    content: "\e933";
+}
+.ico-ring:before {
+    content: "\e934";
+}
+.ico-rings:before {
+    content: "\e935";
+}
+.ico-round-share-location:before {
+    content: "\e936";
+}
+.ico-search:before {
+    content: "\e937";
+}
+.ico-shop:before {
+    content: "\e938";
+}
+.ico-smily-face:before {
+    content: "\e939";
+}
+.ico-star:before {
+    content: "\e93a";
+}
+.ico-sun:before {
+    content: "\e93b";
+}
+.ico-thumb-down:before {
+    content: "\e93c";
+}
+.ico-thumb-up:before {
+    content: "\e93d";
+}
+.ico-vectory:before {
+    content: "\e93e";
+}
+.ico-video-camera:before {
+    content: "\e93f";
+}
+.ico-video-camera-alt:before {
+    content: "\e940";
+}
+.ico-wallat:before {
+    content: "\e941";
+}
+.ico-wifi:before {
+    content: "\e942";
+}
+.ico-woman:before {
+    content: "\e943";
+}
+.ico-youtube:before {
+    content: "\e944";
+}

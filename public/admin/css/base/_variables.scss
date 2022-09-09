@@ -1,0 +1,75 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$gray: #999;
+$black: #000;
+$white: #fff;
+$light-blue: #39f;
+
+$color1: #000532;
+$color2:#191e46;
+$color3:#B175FF;
+$color4: #ffc701;
+$color5:#2C2C2E;
+$color6:#5077C8;
+$color7:#DB4437;
+$color8:#2D9CDB;
+$color9:#FF565E;
+$color10:#F2994A;
+$color11:#27AE60;
+$color12:#EB5757;
+$color13:#FF0000;
+$color14:#BDBDBD;
+$color15:#8C97AC;
+$color16: rgba(255, 255, 255, 0.1);
+$color17: #303458;
+
+
+
+$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+
+// Body
+$base-text-color: $black !default;
+$base-background-color: $white !default;
+$base-font-size: 16px !default;
+$base-line-height: 1.2 !default;
+$base-font-family: $base-font-sans-serif !default;
+$poppins: 'Poppins', sans-serif;
+$icomoon: 'icomoon';
+
+
+
+$vertical-rhythm: ($base-line-height * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $light-blue;
+
+// Buttons 
+$btn-color: $white !default;
+$btn-background: $black !default;
+$btn-padding: 0.4em 0.7em !default;
+$btn-font-size: inherit !default;
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$placeholder-color: $gray !default;
+
+// Headers
+$h1-font-size: 48px !default;
+$h2-font-size: 42px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 18px !default;
+$h5-font-size: 16px !default;
+$h6-font-size: 14px !default;
+
+$headings-font-family: inherit !default;
+$headings-color: inherit !default;
+
+
+$animation-speed: 0.3s;

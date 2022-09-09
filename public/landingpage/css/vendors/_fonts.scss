@@ -1,0 +1,348 @@
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-black-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-black-webfont.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-blackitalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-blackitalic-webfont.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-bolditalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-bolditalic-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-extrabold-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-extrabold-webfont.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-extrabolditalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-extrabolditalic-webfont.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-extralight-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-extralight-webfont.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-extralightitalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-extralightitalic-webfont.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-italic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-italic-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-light-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-lightitalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-lightitalic-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+
+}
+
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-medium-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-medium-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-mediumitalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-mediumitalic-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-semibold-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-semibold-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-semibolditalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-semibolditalic-webfont.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-thin-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-thin-webfont.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'poppins';
+	src: url('../fonts/poppins-thinitalic-webfont.woff2') format('woff2'),
+	url('../fonts/poppins-thinitalic-webfont.woff') format('woff');
+	font-weight: 100;
+	font-style: italic;
+
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?k3rkjq');
+	src:  url('../fonts/icomoon.eot?k3rkjq#iefix') format('embedded-opentype'),
+	url('../fonts/icomoon.ttf?k3rkjq') format('truetype'),
+	url('../fonts/icomoon.woff?k3rkjq') format('woff'),
+	url('../fonts/icomoon.svg?k3rkjq#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youtube:before {
+	content: "\e902";
+}
+.icon-camera-retake:before {
+	content: "\e933";
+}
+.icon-single-image:before {
+	content: "\e934";
+}
+.icon-facbook1:before {
+	content: "\e930";
+}
+.icon-instagram:before {
+	content: "\e931";
+}
+.icon-node:before {
+	content: "\e932";
+}
+.icon-animal:before {
+	content: "\e900";
+}
+.icon-apple:before {
+	content: "\e901";
+}
+.icon-bell:before {
+	content: "\e903";
+}
+.icon-calender:before {
+	content: "\e904";
+}
+.icon-call:before {
+	content: "\e905";
+}
+.icon-cart:before {
+	content: "\e906";
+}
+.icon-check-circle:before {
+	content: "\e907";
+}
+.icon-close:before {
+	content: "\e908";
+}
+.icon-email:before {
+	content: "\e909";
+}
+.icon-everyone:before {
+	content: "\e90a";
+}
+.icon-eye:before {
+	content: "\e90b";
+}
+.icon-eye-line:before {
+	content: "\e90c";
+}
+.icon-facbook:before {
+	content: "\e90d";
+}
+.icon-face:before {
+	content: "\e90e";
+}
+.icon-facebook:before {
+	content: "\e90f";
+}
+.icon-female:before {
+	content: "\e910";
+}
+.icon-gender-female:before {
+	content: "\e911";
+}
+.icon-gender-male:before {
+	content: "\e912";
+}
+.icon-gender-other:before {
+	content: "\e913";
+}
+.icon-gift:before {
+	content: "\e914";
+}
+.icon-google:before {
+	content: "\e915";
+	font-size: 21px;
+}
+.icon-group-img:before {
+	content: "\e916";
+}
+.icon-group-video:before {
+	content: "\e917";
+}
+.icon-heart:before {
+	content: "\e918";
+}
+.icon-help:before {
+	content: "\e919";
+}
+.icon-home:before {
+	content: "\e91a";
+}
+.icon-interaction:before {
+	content: "\e91b";
+}
+.icon-language:before {
+	content: "\e91c";
+}
+.icon-legal:before {
+	content: "\e91d";
+}
+.icon-logout:before {
+	content: "\e91e";
+}
+.icon-male:before {
+	content: "\e91f";
+}
+.icon-man:before {
+	content: "\e920";
+}
+.icon-message-chat:before {
+	content: "\e921";
+}
+.icon-messages:before {
+	content: "\e922";
+}
+.icon-offers:before {
+	content: "\e923";
+}
+.icon-other:before {
+	content: "\e924";
+}
+.icon-refferal:before {
+	content: "\e925";
+}
+.icon-religin:before {
+	content: "\e926";
+}
+.icon-rewind:before {
+	content: "\e927";
+}
+.icon-safety:before {
+	content: "\e928";
+}
+.icon-smoker:before {
+	content: "\e929";
+}
+.icon-star:before {
+	content: "\e92a";
+}
+.icon-sun:before {
+	content: "\e92b";
+}
+.icon-super-likes:before {
+	content: "\e92c";
+}
+.icon-use:before {
+	content: "\e92d";
+}
+.icon-user:before {
+	content: "\e92e";
+}
+.icon-women:before {
+	content: "\e92f";
+}

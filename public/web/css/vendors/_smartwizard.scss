@@ -1,0 +1,74 @@
+.sw {
+  position: relative;
+}
+.sw *,
+.sw ::after,
+.sw ::before {
+  box-sizing: border-box;
+}
+.sw > .tab-content {
+  position: relative;
+  overflow: hidden;
+}
+
+#smartwizard{
+  .nav{
+    @extend %listreset;
+    position: relative;
+    text-align: center;
+    letter-spacing: -5px;
+    display: block;
+    padding: 0 0 50px 100px;
+
+    li{
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: 0;
+      overflow: hidden;
+
+      &:last-child{
+        a{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+
+    a{
+      @include flex-align-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $basecolor1;
+      color: #fff;
+      margin: 0 100px 0 0;
+      position: relative;
+
+      &.done,
+      &.active{
+        background: $purple;
+
+        &:after{
+          background: $purple;
+        }
+      }
+
+      &:after{
+        position: absolute;
+        content: '';
+        background: rgba(255,255,255,0.1);
+        left: 100%;
+        width: 999px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.toolbar-bottom{
+  display: none;
+}

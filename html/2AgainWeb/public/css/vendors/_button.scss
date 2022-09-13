@@ -1,0 +1,232 @@
+a{
+  text-decoration: none;
+  &:hover{
+    color: #fff;
+  }
+}
+.btn,
+.button,
+button,
+input[type="submit"],
+input[type="button"]{
+  padding: 0 20px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 32px;
+  border-radius: 30px;
+  background: $purple;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $purple;
+  @include flex-align-center;
+  @include ease;
+  font-family: $base-font-family;
+
+  &:hover{
+    color: #fff;
+    background-color: #A057FF;
+  }
+  &:focus{
+    box-shadow: none;
+  }
+
+  &.btn-dark-blue{
+    background: $basecolor;
+    border-color: $basecolor;
+    color: $purple;
+
+    &:hover{
+      background: $purple;
+      border-color: $purple;
+      color: #fff;
+    }
+  }
+
+  &.btn-transparent{
+    background: rgba(255,255,255,0.1);
+    border-color: transparent;
+  }
+
+  &.btn-secondary{
+    background: $basecolor2;
+    border-color: $basecolor2;
+
+    &:hover{
+      background: #2D304E;
+      border-color: #2D304E;
+    }
+  }
+
+  &.btn-yellow{
+    background: $yellow;
+    border-color: $yellow;
+    color: #000;
+
+    &:hover{
+      background: #c59d00;
+      border-color: #c59d00;
+    }
+  }
+
+  &.btn-orange{
+    background: $yellow1;
+    border-color: $yellow1;
+    color: #fff;
+
+    &:hover{
+      background: #DE8332;
+      border-color: #DE8332;
+    }
+  }
+
+  &.btn-danger{
+    background: $red;
+    border-color: $red;
+    color: #fff;
+
+    &:hover{
+      background: #D73939;
+      border-color: #D73939;
+    }
+  }
+
+  &.btn-danger-outline{
+    background: transparent;
+    border-color: $red;
+    color: $red;
+
+    &:hover{
+      background: #D73939;
+      border-color: #D73939;
+      color: #fff;
+    }
+  }
+
+  &.btn-success{
+    background: $green;
+    border-color: $green;
+    color: #fff;
+
+    &:hover{
+      background: #088E41;
+      border-color: #088E41;
+    }
+  }
+
+  &.btn-dark-green{
+    background: $darkgreen;
+    border-image: $darkgreen;
+    color: #fff;
+
+    &:hover{
+      background: $darkgreen;
+      border-image: $darkgreen;
+    }
+  }
+
+  &.btn-blue{
+    background: $blue;
+    border-color: $blue;
+    color: #fff;
+
+    &:hover{
+      background: #0d85c9;
+      border-color: #0d85c9;
+    }
+  }
+
+
+  &.circle{
+    width: 34px;
+    padding: 0;
+
+    i{
+      margin: 0 !important;
+    }
+  }
+
+  &.outline{
+    background: none;
+    color: $purple;
+    border-color: #797B92;
+    &.border-purple{
+      border-color: $purple;
+    }
+    &:hover{
+      background: $purple;
+      color: #fff;
+      border-color: $purple;
+    }
+  }
+
+  &.small{
+    height: 24px;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0 10px;
+  }
+
+  &.large{
+    height: 42px;
+    line-height: 42px;
+  }
+
+  &.small-cirle{
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+
+    i{
+      font-size: 12px;
+    }
+
+  }
+
+
+
+}
+
+
+.btn-group{
+  @extend %listreset;
+  position: relative;
+
+  .btn,
+  button,
+  > a{
+    border-radius: 30px !important;
+    letter-spacing: 0;
+    margin: 0 5px !important;
+
+    i{
+      margin: 0 5px 0 0;
+    }
+  }
+
+  &.row{
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+
+    > div {
+      &[class*="col"] {
+        padding: 0;
+      }
+    }
+  }
+
+  &.equal{
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0;
+
+    a,
+    button,
+    .btn{
+        flex: 0 0 auto;
+        width: calc(25% - 10px);
+        padding: 0;
+    }
+  }
+}

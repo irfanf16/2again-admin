@@ -1,0 +1,413 @@
+.modal{
+  .modal-content{
+    border-radius: 10px;
+  }
+
+  &[class*="custom"] {
+
+    .modal-dialog{
+      //max-width: 400px;
+    }
+
+    .modal-header{
+      border-color: rgba(255,255,255,0.1);
+      .btn-close{
+        width: auto;
+        height: auto;
+        position: relative;
+        margin: 0;
+        opacity: 1;
+      }
+    }
+
+    .modal-content{
+      border-radius: 10px;
+    }
+
+    .search-box{
+      position: relative;
+      .btn{
+        background: none;
+        position: relative;
+        top: 0;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        box-shadow: none;
+      }
+    }
+
+    &.message{
+      .modal-dialog {
+        max-width: 530px;
+      }
+      .modal-content{
+        padding: 50px 100px 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+      }
+      .user-img{
+        width: 150px;
+        height: 150px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+      }
+      .message-list{
+        height: auto;
+        overflow-y: visible;
+        margin: 15px 0;
+        .chat-box{
+          background: $basecolor1;
+          border-radius: 10px;
+          text-align: center;
+          padding: 15px 15px 10px;
+          .text{
+            border-radius: 0;
+            padding: 10px 0;
+            margin: 0;
+          }
+          .detail{
+            justify-content: center;
+          }
+        }
+      }
+      .btn-group{
+        gap: 20px;
+      }
+    }
+
+    &.chat_message{
+      form{
+        textarea,
+        select,
+        .form-select,
+        .form-control{
+          border-radius: 10px;
+          background: $basecolor2;
+          border-color: transparent;
+        }
+        textarea{
+          min-height: 200px
+        }
+      }
+    }
+
+    &.visibility{
+      .btn-close{
+        color: #828282;
+      }
+      .modal-body{
+        padding: 40px 50px;
+        h2{
+          text-transform: capitalize;
+        }
+        .btn-group{
+          &.row{
+            gap: 20px;
+            .btn{
+              height: 42px;
+            }
+          }
+        }
+      }
+    }
+
+    &.invite{
+      .btn-group{
+        gap: 20px;
+        .btn{
+          &.btn-secondary{
+            border: 1px dashed $purple;
+          }
+        }
+      }
+    }
+
+    &.add_gifts{
+      .modal-dialog{
+        max-width: 650px;
+      }
+      .modal-body{
+        height: 500px;
+      }
+    }
+
+
+    &.edit_photo{
+      .modal-content{
+        padding:0;
+        border-radius: 10px;
+      }
+      .modal-body{
+        padding: 25px 40px 45px;
+      }
+      .btn-group{
+        .btn{
+          width: 100%;
+          gap: 15px;
+          font-size: 16px;
+          height: 42px;
+          i{
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &.show_photo,
+    &.show_video{
+      .modal-body{
+        padding: 0;
+      }
+      video{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        vertical-align: top;
+        border-radius: 10px;
+      }
+      .img-box{
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    &.refferal{
+      .modal-content{
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+      }
+      .modal-header{
+        justify-content: end;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 0;
+        .btn{
+          z-index: 1;
+        }
+      }
+      .modal-body{
+        padding: 60px 150px 40px;
+        text-align: center;
+      }
+      .img-box{
+        margin-bottom: 20px;
+      }
+      form{
+        .form-group{
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          input{
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &.offer{
+      .modal-header{
+        .btn{
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .modal-body{
+        .btn{
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+      .modal-content{
+        background: linear-gradient(180.96deg, #A126ED -14.52%, #000532 74.6%);
+      }
+    }
+
+  }
+
+  .modal-sm{
+    max-width: 400px;
+  }
+
+  .btn-close{
+    height: 30px;
+    width: 30px;
+    line-height: 15px;
+    z-index: 1;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    display: block;
+    padding: 0;
+    background: none;
+    color: #fff;
+    &:focus{
+      box-shadow: none;
+    }
+
+    &.opacity{
+      opacity: 1;
+    }
+    &.circle{
+      opacity: 1;
+      &:hover{
+        color: $purple;
+      }
+    }
+
+    &.right{
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.alert{
+    .modal-content{
+      background: $basecolor1;
+      color: #fff;
+      border-radius: 10px;
+
+      .modal-body{
+        padding: 25px;
+        text-align: center;
+      }
+
+      .modal-footer{
+        border-color: rgba(255,255,255,0.1);
+        padding: 0;
+
+        .btn{
+          background: none;
+          color: $purple;
+          flex: 0 0 50%;
+          margin: 0;
+          border: none;
+          border-radius: 0;
+          height: 40px;
+          line-height: 40px;
+
+          &:last-child{
+            border-left: 1px solid rgba(255,255,255,0.1);
+          }
+
+          &.btn-danger{
+
+          }
+        }
+      }
+    }
+  }
+
+  &.verification{
+    .modal-header{
+      display: block;
+    }
+    .content-box{
+      overflow: visible;
+    }
+    .check{
+      background: #00D65B;
+      height: 42px;
+      width: 42px;
+      line-height: 42px;
+      font-size: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px auto;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.join_popup{
+    .modal-dialog{
+      max-width: 660px;
+    }
+    .modal-body{
+      max-width: 410px;
+      margin: 0 auto;
+    }
+    h1{
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 54px;
+      letter-spacing: 0.175em;
+      text-transform: capitalize;
+      font-feature-settings: 'zero' on;
+    }
+    .form{
+      margin-top: 40px;
+      input{
+        text-align: center;
+        margin: 0 0 30px;
+      }
+    }
+    .btn{
+      height: 42px;
+      line-height: 40px;
+      position: relative;
+      i{
+        background-color: #fff;
+        font-size: 22px;
+        color: $purple;
+        @include flex-align-center;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+      }
+    }
+  }
+
+
+  .camera-box{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100% !important;
+    height: 240px !important;
+    border-radius: 10px;
+    background-color: $basecolor1;
+    border: 1px dashed rgba(255,255,255,0.3);
+    .img-box{
+      img{
+        width: 100%;
+      }
+    }
+    .upload-box{
+      @include flex-align-center;
+      height: 100%;
+      gap: 15px;
+      color: #E0E0E0;
+      i{
+        font-size: 26px;
+      }
+    }
+    .camera{
+    }
+  }
+
+  form{
+    textarea{
+      min-height: 200px
+    }
+  }
+}

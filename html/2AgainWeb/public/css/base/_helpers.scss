@@ -1,0 +1,143 @@
+// list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// clearfix
+%clearfix {
+ &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+
+// transition
+%transition {
+ transition: all 0.3s ease-in-out;
+}
+
+// justify nav
+%justify {
+ text-align: justify;
+ > * {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+ }
+ &:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+ }
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/// * Helper class to truncate and add ellipsis to a string too long for it to fit
+/// * on a single line.
+/// * 1. Prevent content from wrapping, forcing it on a single line.
+/// * 2. Add ellipsis at the end of the line.
+
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+
+.text-yellow{
+  color: $yellow !important;
+}
+.text-success{
+  color: $green !important;
+}
+.text-danger{
+  color: $red !important;
+}
+.text-purple{
+  color: $purple !important;
+}
+.text-gray{
+  color: #BDBDBD;
+}
+.bg-success{
+  background: $green !important;
+}
+.bg-danger{
+  background: $red !important;
+}
+.bg-blue{
+  background: $blue !important;
+}
+.bg-yellow-dark{
+  background: #F2994A !important;
+}
+
+.font-12{
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.font-16{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.link{
+  text-decoration: none;
+
+  &:hover{
+    color: $purple !important;
+  }
+}
+
+.bg-purple{
+  background-color: $purple !important;
+}
+.bg-dark-blue{
+  background-color: $basecolor1;
+}
+.bg-basecolor1{
+  background-color: $basecolor1 !important;
+}
+.bg-basecolor2{
+  background-color: $basecolor2 !important;
+}
+
+.text-green{
+  color: $green;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-start{
+  text-align: left;
+}
+
+.text-end{
+  text-align: right;
+}
+
+.border-purple{
+  border: 1px solid $purple;
+}

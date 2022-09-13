@@ -1,0 +1,20 @@
+.iconimg{
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+
+  &.ico-gold{
+    background-image: url("../images/gold-coin.svg");
+  }
+  &.ico-silver{
+    background-image: url("../images/silver-coin.svg");
+  }
+
+}
+

@@ -1,0 +1,185 @@
+﻿.tour-active-element {
+    position: relative;
+    z-index: 1050;
+    border-radius: 50%;
+    background-image: linear-gradient(180.07deg, #A126ED 0.06%, #000532 50.19%);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    &.iconimg{
+        &.ico-gold{
+            background-image: url(../images/gold-coin.svg), linear-gradient(180.07deg, #A126ED 0.06%, #000532 50.19%);
+            background-size: auto;
+        }
+        &.ico-silver{
+            background-image: url(../images/silver-coin.svg), linear-gradient(180.07deg, #A126ED 0.06%, #000532 50.19%);
+            background-size: auto;
+        }
+    }
+    //&:after{
+    //    position: absolute;
+    //    content: "";
+    //    background-image: url("../images/icon-bg-circle.svg");
+    //    background-size: auto;
+    //    background-repeat: no-repeat;
+    //    background-position: center;
+    //    top: -2px;
+    //    right: 0;
+    //    left: -4px;
+    //    bottom: 0;
+    //    width: 30px;
+    //    height: 30px;
+    //    z-index: -1;
+    //    overflow: hidden;
+    //    border-radius: 50%;
+    //}
+    //&:after{
+    //    position: absolute;
+    //    content: "";
+    //    top: -4px;
+    //    left: -4px;
+    //    right: 0;
+    //    bottom: 0px;
+    //    border-radius: 50%;
+    //    z-index: -1;
+    //    background: linear-gradient(180.07deg, #A126ED 0.06%, #000532 50.19%);
+    //    width: 22px;
+    //    height: 22px;
+    //}
+}
+
+body.tour-active-element {
+    border: none;
+}
+
+.popover-tour {
+    &.popover-tour-center {
+        inset: 50% auto auto 50% !important;
+        position: fixed !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .hidden {
+        display: none !important;
+    }
+    padding: 5px 10px;
+    min-width: 300px;
+    width: 500px;
+    max-width: 100%;
+    font-size: 14px;
+    z-index: 1051;
+    text-align: justify;
+    .tour-exit {
+        &:before {
+            font-family: "Arial";
+            content: "X";
+            position: absolute;
+            cursor: pointer;
+            font-size: 10px;
+            top: 6px;
+            right: 10px;
+            padding: 3px;
+        }
+    }
+    .popover-header {
+        background: none;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .popover-body {
+        padding: 20px 0 10px;
+        .tour-tabs {
+            >div {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+        .tour-tab-links {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            li {
+                display: inline-block;
+                a {
+                    padding: 4px;
+                    margin: 0 2px;
+                    background: #ced4da;
+                    font-size: 1px;
+                    border-radius: 4px;
+                    &.active {
+                        padding: 4px 10px;
+                        background: #adb5bd;
+                    }
+                }
+            }
+        }
+    }
+    .popover-footer {
+        background: none;
+        &.btn-group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 -5px;
+            .btn{
+                display: inline-block;
+                vertical-align: top;
+                flex: 0 0 auto;
+            }
+        }
+        .tour-finish,
+        .tour-next {
+            float: right;
+        }
+    }
+}
+//.modal-backdrop{
+//    background: $basecolor1;
+//    &.show{
+//        opacity: 0.4;
+//    }
+//}
+
+.bs-popover-bottom {
+    > .popover-arrow {
+        &:before {
+            border-bottom-color: $purple;
+        }
+        &:after{
+            border-bottom-color: $basecolor;
+        }
+    }
+}
+.bs-popover-top{
+    > .popover-arrow{
+        &:before{
+            border-top-color: $purple;
+        }
+        &:after{
+            border-top-color: $basecolor;
+        }
+    }
+}
+.bs-popover-start{
+    > .popover-arrow{
+        &:before{
+            border-left-color: $purple;
+        }
+        &:after{
+            border-left-color: $basecolor;
+        }
+    }
+}
+.bs-popover-end{
+    > .popover-arrow{
+        &:before{
+            border-right-color: $purple;
+        }
+        &:after{
+            border-right-color: $basecolor;
+        }
+    }
+}

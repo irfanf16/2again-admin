@@ -1,0 +1,86 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$gray: #999;
+$black: #000;
+$white: #fff;
+$light-blue: #39f;
+$elricblue:#005596;
+$concrete:#f2f2f2;
+$mercury:#e6e6e6;
+
+
+$color14:#BDBDBD;
+$basecolor1: #191E46;
+$basecolor: #000532;
+$basecolor2: #303458;
+$yellow: #FFC701;
+$darkgray: #2C2C2E;
+$facebookcolor: #5077C8;
+$googlecolor: #DB4437;
+$purple: #B175FF;
+$blue:#2D9CDB;
+$red: #EB5757;
+$yellow1: #F2994A;
+$green: #27AE60;
+$lightgray: #303458;
+$darkred: #FF0000;
+$darkgreen:radial-gradient(7243% 7243% at 9906% 9918%, #00632E 0%, #003612 98%);
+$light-yellow: linear-gradient(90deg, #EEBE47 4798%, #F8DB77 5486.8%, #FFEE96 6003.4%, #A2621E 7381%, #EEA54C 8643.8%, #EEBE47 10538%);
+$gold: linear-gradient(358.34deg, #F1D13F -7.29%, #EBC244 18.93%, #B78628 35.85%, #D6AA39 62.81%, #E9BE38 99.87%);
+$silver: linear-gradient(358.86deg, #D2D2D2 6.18%, #BABABA 14.69%, #E4E4E5 21.07%, #737376 38.09%, #838486 53.69%, #E4E5E6 77.09%);
+$bottomgradient:linear-gradient(180.11deg, rgba(0, 5, 50, 0.99) 41.66%, rgba(25, 30, 70, 0) 95.2%);
+
+
+
+
+
+
+$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$poppins: 'poppins';
+$awesome: "Font Awesome 5 Pro";
+$icomoon: "icomoon";
+
+// Body
+$base-text-color: $white !default;
+$base-background-color: $basecolor !default;
+$base-font-size: 12px !default;
+$base-line-height: 18px !default;
+$base-font-family: $poppins !default;
+
+
+
+$vertical-rhythm: ($base-line-height * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $light-blue;
+
+// Buttons
+$btn-color: $white !default;
+$btn-background: $black !default;
+$btn-padding: 0.4em 0.7em !default;
+$btn-font-size: inherit !default;
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$placeholder-color: $gray !default;
+
+// Headers
+$h1-font-size: 24px !default;
+$h2-font-size: 20px !default;
+$h3-font-size: 18px !default;
+$h4-font-size: 16px !default;
+$h5-font-size: 14px !default;
+$h6-font-size: 12px !default;
+
+$headings-font-family: inherit !default;
+$headings-color: inherit !default;
+
+
+$animation-speed: 0.3s;

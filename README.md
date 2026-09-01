@@ -46,18 +46,13 @@ Full-featured **admin panel and REST API backend** for the 2Again social/dating 
 
 ## Architecture
 
-```
-web.php (admin Blade UI) → admin/* controllers
-  ├── ManageUsers, Shop, Subscription, Withdrawal, Media
-  └── Reporting, Content, Chatbot
-
-External:
-  AWS S3         — media storage
-  Firebase FCM   — push notifications
-  Stripe         — payments
-  Twilio         — voice calls
-  BotMan+Dialogflow — chatbot
-  Google Socialite  — OAuth
+```mermaid
+flowchart TB
+    ADM["Admin Blade UI — web.php"] --> CTRL["admin/* controllers"]
+    CTRL --> C1["ManageUsers · Shop · Subscription<br/>Withdrawal · Media"]
+    CTRL --> C2["Reporting · Content · Chatbot"]
+    CTRL --> DB[("MySQL<br/>shared with 2-Agian mobile API")]
+    CTRL --> EXT["AWS S3 · Firebase FCM · Stripe<br/>Twilio · BotMan + Dialogflow · Socialite"]
 ```
 
 > Mobile app API routes live in the sister repo `2-Agian` (shared same database).
